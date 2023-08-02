@@ -3,11 +3,12 @@
 - ROS2 Humble 기반 simulation docker 생성
 
 ## 개발 환경
-- Ubuntu 22.04 LTS
-- ROS2 Humble
-- ROS2 Navigation2
-- docker
-- Turtlebot3
+  - Ubuntu 22.04 LTS
+  - ROS2 
+    - Humble
+    - Navigation2
+  - Docker
+  - Turtlebot3
 
 # 사용 방법
 1. 설치해당 git repo에서 clone
