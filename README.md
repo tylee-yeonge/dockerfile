@@ -29,9 +29,19 @@
 7. 코드 build
   - sh build.sh
 8. simulator 실행
+  - 개별 터미널 실행 필요 
   - gazebo 실행
+    - xhost +local:docker
+    - docker exec -it {생성한 docker container 이름} bash
+      - 예) docker exec -it nav2-sim bash
     - source /humble-ws/start-gazebo.bash
   - nav2 실행
+    - xhost +local:docker
+    - docker exec -it {생성한 docker container 이름} bash
+      - 예) docker exec -it nav2-sim bash
     - source /humble-ws/start-nav2.bash
   - rviz 실행
+    - xhost +local:docker
+    - docker exec -it {생성한 docker container 이름} bash
+      - 예) docker exec -it nav2-sim bash
     - source /humble-ws/start-rviz.bash
