@@ -22,5 +22,16 @@
 4. 등록한 docker container 시작
   - docker start {docker container 이름}
   - 예) docker start humble-nav2-sim
-5. docker container 진입
+5. x window 사용 설정
+  - xhost +local:docker
+6. docker container 진입
   - docker exec -it humble-nav2-sim bash
+7. 코드 build
+  - sh build.sh
+8. simulator 실행
+  - gazebo 실행
+    - source /humble-ws/start-gazebo.bash
+  - nav2 실행
+    - source /humble-ws/start-nav2.bash
+  - rviz 실행
+    - source /humble-ws/start-rviz.bash

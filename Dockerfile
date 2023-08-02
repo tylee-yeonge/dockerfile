@@ -23,6 +23,7 @@ COPY apply-turtlebot3-in-aws-warehouse.sh .
 COPY adjust-detecting-lider-distance.sh .
 COPY model.sdf .
 COPY no_roof_small_warehouse.world .
+COPY turtlebot3_in_aws_warehouse.launch.py .
 
 RUN sh install-humble.sh
 RUN sh install-nav2.sh
@@ -31,13 +32,17 @@ RUN sh install-aws-warehouse.sh
 RUN sh install-turtlebot3.sh
 RUN sh apply-turtlebot3-in-aws-warehouse.sh
 RUN sh adjust-detecting-lider-distance.sh
+RUN cp turtlebot3_in_aws_warehouse.launch.py /humble-ws/src/aws-robomaker-small-warehouse-world/launch
 
 COPY set-vi.sh .
 RUN apt install vim -y
-RUN echo "" >> ~/.bashrc
+RUN sh set-vi.sh
 
 RUN rm -rf /installer
 
 WORKDIR /humble-ws
 COPY build.sh .
 # RUN sh build.sh
+COPY start-gazebo.bash .
+COPY start-nav2.bash .
+COPY start-rviz.bash .
