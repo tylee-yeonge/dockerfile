@@ -13,6 +13,8 @@
 1. 설치해당 git repo에서 clone
 2. build-docker.bash 편집 및 실행
   - --tag에 원하는 image:tag 형식으로 입력
+  - 실행 명령어
+    - source build-docker.bash
   - 실행 후 docker에 image 등록됨
 3. 등록된 image를 이용하여 container 생성
   - ./create-docker-container.sh {docker-image 이름):{docker-image tag} {생성할 docker container 이름}
