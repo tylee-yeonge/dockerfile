@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     python3-rosinstall \
     python3-vcstools \
     vim \
+    git \
     && rm -rf /var/lib/apt/lists/*
 
 # bootstrap rosdep
@@ -25,3 +26,6 @@ WORKDIR /installer
 COPY set-vi.sh .
 RUN sh set-vi.sh
 RUN rm -rf /installer
+
+RUN mkdir /catkin_ws
+WORKDIR /catkin_ws
