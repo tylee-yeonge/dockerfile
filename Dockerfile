@@ -28,4 +28,5 @@ RUN sh set-vi.sh
 RUN rm -rf /installer
 
 RUN mkdir /catkin_ws
+RUN echo "/opt/ros/noetic/setup.bash" >> ~/.bashrc
 WORKDIR /catkin_ws
