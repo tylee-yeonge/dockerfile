@@ -2,7 +2,7 @@ set -e
 IMAGE=$1
 CONTAINER=$2
 docker create -it \
-  --env="DISPLAY=host.docker.internal:0" \
+  --env="DISPLAY=$DISPLAY" \
   --net="host" \
   --name "${CONTAINER}"\
   --platform linux/amd64 \
