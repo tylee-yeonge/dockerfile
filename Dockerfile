@@ -70,4 +70,7 @@ RUN rm -rf /installer
 
 WORKDIR /root/share
 
-CMD ["bash"]
+RUN echo "source /opt/ros/humble/setup.bash" >> /root/.bashrc
+
+# CMD ["bash"]
+CMD ["tail", "-f", "/dev/null"]
