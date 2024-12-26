@@ -69,3 +69,5 @@ RUN sh set-vi.sh
 RUN rm -rf /installer
 
 WORKDIR /root/share
+
+CMD ["bash"]
