@@ -51,6 +51,7 @@ RUN apt-get update -q && \
     python3-colcon-common-extensions \
     python3-rosdep python3-vcstool && \
     rosdep init && \
+    ros-humble-rmw-cyclonedds-cpp \
     rm -rf /var/lib/apt/lists/*
 
 RUN rosdep update
